@@ -10,5 +10,5 @@ To see an automated fix on PR, follow these instructions:
 
 > [!TIP]
 > To commit the suggested code fix, simply click on ***Commit fix***, and the changes will be commited to the same PR.
->
-> <video>
+
+---video
