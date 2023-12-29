@@ -18,7 +18,7 @@ Once the PR is created, GitHub CodeQL will automatically start a security scan a
 Mobb Fixer will immediately run and present a fix suggestion in the PR conversation tab.
 
 > [!TIP]
-> To commit the suggested code change, simply click on ***Commit fix***, and the changes will be commited to the same PR.
+> To commit the suggested code change, simply click on ***Commit fix***, and the fix will be commited to the same PR. Security scan we run again immediately and flag the issue as "Fixed".
 
 
 
