@@ -56,7 +56,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Initializes the CodeQL tools for scanning.
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
@@ -83,21 +82,25 @@ jobs:
       #     echo "Run, Build Application using script"
       #     ./location_of_script_within_repo/buildscript.sh
 
-      - name: Perform CodeQL Analysis
+      - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v2
         with:
           category: "/language:${{matrix.language}}"
           output: results
+
+      - name: Upload CodeQL results file
       - uses: actions/upload-artifact@v3
         with:
           name: codeql-res
           path: results
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
-      - name: Extract tgz
+
+      - name: Extract CodeQL tgz results file
         uses: ihiroky/extract-action@v1
         with:
           file_path: results/codeql-res.zip
           extract_dir: results
+
       - name: Run Mobb on the findings and get fixes
         if: always()
         uses: mobb-dev/action@beta0.0.4
