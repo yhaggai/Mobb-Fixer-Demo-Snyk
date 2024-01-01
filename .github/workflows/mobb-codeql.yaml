@@ -26,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["javascript-typescript", "go"]
+        language: ["javascript-typescript"]
         # CodeQL supports [ 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift' ]
         codeql_output_filename: ["javascript.sarif"]
 
