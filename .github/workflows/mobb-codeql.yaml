@@ -33,7 +33,6 @@ jobs:
       checks: write
       contents: write
       pull-requests: write
-      repository-projects: write
       statuses: write
 
     strategy:
