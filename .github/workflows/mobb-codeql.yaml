@@ -45,12 +45,6 @@ jobs:
           category: "/language:${{ matrix.language }}"
           output: results
 
-      # - name: Extract CodeQL tgz results file
-      #   uses: ihiroky/extract-action@v1
-      #   with:
-      #     file_path: results/codeql-res.zip
-      #     extract_dir: results
-
       - name: Run Mobb on the findings and get fixes
         if: always()
         uses: mobb-dev/action@beta0.0.4
