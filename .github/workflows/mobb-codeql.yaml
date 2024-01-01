@@ -89,7 +89,7 @@ jobs:
           output: results
 
       - name: Upload CodeQL results file
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: codeql-res
           path: results
