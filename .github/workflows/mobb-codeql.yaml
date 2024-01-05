@@ -2,8 +2,9 @@
 # This workflow defines the needed steps to run CodeQL on every pull request and 
 # pass the results to Mobb Fixer.
 #
-# For most projects, this workflow file will not need changing; you simply need
-# to commit it to your repository.
+# Secrets in use:
+# MOBB_API_TOKEN - your mobb user credentials (autumatially set if you forked this repo via the Mobb app)
+# GITHUB_TOKEN - automatically set by GitHub
 
 name: "Mobb / CodeQL"
 
