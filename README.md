@@ -5,9 +5,9 @@
 \
 \
 \
-See how automatic fixes on pull requests work:
+Click below to see how automatic fixes on pull requests work:
 
-[<img width="250" alt="image" src="https://github.com/tomer-mobb/Mobb-Fixer-Demo-CodeQL/assets/132216976/12a95453-f72e-4cf0-932f-db5f3be405a2">](/../../compare/main...introduce-new-security-issue)
+[<img width="250" alt="image" src="https://github.com/tomer-mobb/Mobb-Fixer-Demo-CodeQL/assets/132216976/12a95453-f72e-4cf0-932f-db5f3be405a2">](/../../pull/new/introduce-new-security-issue)
 \
 \
 \
