@@ -6,35 +6,29 @@
 # MOBB_API_TOKEN - your mobb user credentials (autumatially set if you forked this repo via the Mobb app)
 # GITHUB_TOKEN - automatically set by GitHub
 
-name: "Mobb / Snyk"
-
-on:
-  pull_request:
-    branches: ["main"]
-
-jobs:
-  scan-and-fix:
-    name: Scan with Snyk and fix with Mobb
-    runs-on: 'ubuntu-latest'
-    timeout-minutes: 360
-    permissions:
+on: [pull_request]
+permissions:
       actions: write
       checks: write
       contents: write
       pull-requests: write
       statuses: write
 
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repo to get code
         uses: actions/checkout@v3
-
-      - name: Run Snyk SAST scan
+      - name: Run SAST scan
         run:
-          npx snyk auth ${{ secrets.SNYK_API_KEY }} && npx snyk code test --sarif-file-output=/home/runner/report.json ./
+          npx snyk auth ${{ secrets.SNYK_API_KEY }}
+          
+          npx snyk code test --sarif-file-output=/home/runner/report.json ./
+          
         shell: bash -l {0}
-
       - name: Run Mobb on the findings and get fixes
-        if: always()
+        if: failure()
         uses: mobb-dev/action@beta0.0.4
         with:
           report-file: "/home/runner/report.json"
