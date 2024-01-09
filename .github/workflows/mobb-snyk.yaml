@@ -35,7 +35,6 @@ jobs:
 
       - name: Run Mobb on the findings and get fixes
         if: always()
-#        uses: mobb-dev/action@beta0.0.4
         uses: mobb-dev/action@beta0.0.4
         with:
           report-file: "/home/runner/report.json"
