@@ -13,7 +13,7 @@ Click below to see how automatic fixes on pull requests work:
 \
 This will let you start a pull request from branch `introduce-new-security-issue` to branch `main`.
 
-Once the PR is created, GitHub CodeQL will automatically start a security scan and report an issue.
+Once the PR is created, Snyk will automatically start a code security scan and report an issue.
 
 Mobb Fixer will immediately run and present a fix suggestion in the PR conversation tab.
 
